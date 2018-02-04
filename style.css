@@ -141,5 +141,8 @@ ul{
   color:#bbbdbf;
   
 }
-
+.linkto:hover{
+  text-decoration: underline #FFC107;
+  font-weight: bold;
+}
 
