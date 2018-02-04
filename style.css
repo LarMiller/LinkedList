@@ -1,60 +1,126 @@
 body{
   width: 100%;
+  padding: 0;
+  margin: 0;
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0;
 }
 
 h1{
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   color:#ffffff;
-  font-size: 50px;
+  font-size: 60px;
   margin:0;
 }
-
+a{
+  text-decoration: none;
+  font-weight: normal;
+  color: inherit;
+}
+h2{
+  font-size: 24px;
+  font-weight: 800;
+  color:#455a64;
+  align-self: left;
+  margin:0;
+}
+p{
+  color: #607D8B;
+  align-self: left;
+  font-size: 16px;
+  cursor:pointer;
+}
 main{
   width: 80%;
   margin: 10px auto 10px auto;
-  padding-top: 50%;
+  padding-top: 35%;
 }
-
+ul{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+}
 #title{
   display: flex;
   justify-content: space-around;
-  margin: 10px auto 10px auto;
+  margin: 13px auto 10px auto;
   box-sizing: border-box;
 }
-
+#count{
+  text-align: center;
+}
 #enterButton{
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   color:#ffffff;
   background-color: #ffc107;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
 }
-
 #title img{
   width: 70px;
   height: 70px;
 }
 
-#enterButton::hover{
+#enterButton:hover{
   background-color: #ffd773;
 }
-
+.bookmark{
+  width: 100%;
+  height: 21vh;
+  border: 1px solid #455A64;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: white;
+}
+.bookmarkBox{
+  padding-top: 10px;
+  width: 90%;
+}
 
 .firstSection{
   width: 50%;
   height:100%;
   display: inline-block;
   background-color: #455A64;
-  
+  box-sizing: border-box;
 }
-
+.readButton{
+  color: #455A64;
+  border: none;
+  font-weight: ;
+  text-decoration: underline #F4F6F6;
+  text-transform: ;
+}
+.readButton:hover{
+  color: #455A64;
+  text-decoration: underline #FFC107;
+  font-weight: bold;
+}
+.deleteButton{
+  color: #455A64;
+  border: none;
+  text-decoration: underline #F4F6F6;
+}
+.deleteButton:hover{
+  color: #455A64;
+  border: none;
+  font-weight;
+  text-decoration: underline #FFC107;
+}
 .secondSection{
-  width: 50%;
+  width: 50%; 
   height:100%;
   display: inline-block;
   background-color: #CFD8DC;
+  box-sizing: border-box;
+  vertical-align: top;
 }
 
 .websiteTitle{
@@ -63,7 +129,8 @@ main{
   display:block;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  font-size: 17px;
+  font-size: 19px;
+  color:#bbbdbf;
   
 }
 
@@ -72,7 +139,10 @@ main{
   padding: 15px;
   display:block;
   font-family: 'Open Sans', sans-serif;
-  font-size: 17px;
+  font-size: 19px;
   box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color:#bbbdbf;
   
 }
