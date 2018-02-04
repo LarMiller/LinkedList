@@ -31,6 +31,8 @@ p{
   align-self: left;
   font-size: 16px;
   cursor:pointer;
+  border-bottom: 1px solid #CFD8DC;
+  border-top: 1px solid #CFD8DC;
 }
 main{
   width: 80%;
@@ -145,4 +147,4 @@ ul{
   text-decoration: underline #FFC107;
   font-weight: bold;
 }
-
+.title:
