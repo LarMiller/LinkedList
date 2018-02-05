@@ -33,6 +33,7 @@ readButton.classList.add('readButton');
 delButton.classList.add('deleteButton');
 
 //new elements from above are placed into a new list
+
 li.appendChild(websiteTitle);
 li.appendChild(websiteUrl);
 li.appendChild(readButton);
@@ -75,7 +76,6 @@ var bookmarks = document.querySelectorAll('.bookmark');
 var bookmarksCount = bookmarks.length;
 pCount.innerHTML= "Total Bookmarks = " + bookmarksCount; 
 }
-
 
 
 
