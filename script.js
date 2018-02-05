@@ -1,41 +1,81 @@
 
 
-var list = document.querySelector('.bookmarkBox ul')
-const addForm = document.forms['titleAndUrl'];
+var list = document.querySelector('.bookmarkBox ul');
+var addForm = document.forms['titleAndUrl'];
+var titleOne = document.querySelector('#titleOne');
+var pOne = document.querySelector('#pOne');
+var deleteButton = document.querySelectorAll('.deleteButton');
+var pCount = document.querySelector('#count');
+var list = document.querySelector('.bookmarkBox ul');
 
 
+
+// Getting the value of title and Url input
 addForm.addEventListener('submit', function(e){
   e.preventDefault();
-  const titleValue = addForm.querySelector('input[type= "text"]').value; 
-  const urlValue = addForm.querySelector('input[type= "url"]').value; 
-   
-
+  var titleValue = addForm.querySelector('input[type= "text"]').value; 
+  var urlValue = addForm.querySelector('input[type= "url"]').value; 
+  addForm.reset();
 
 // creating new elements assigning to new variables
-const li= document.createElement('li');
-const websiteTitle= document.createElement('h2');
-const websiteUrl= document.createElement('p');
-const readButton= document.createElement('button');
-const delButton= document.createElement('button');
+var li= document.createElement('li');
+var websiteTitle= document.createElement('h2');
+var websiteUrl= document.createElement('p');
+var readButton= document.createElement('button');
+var delButton= document.createElement('button');
 
-
-//new elements from above are placed into a new list
-li.appendChild(websiteTitle)
-li.appendChild(websiteUrl)
-li.appendChild(readButton)
-li.appendChild(delButton)
-list.appendChild(li)   //list generation
 
 // adding classes
- li.classList.add('bookmark');
- websiteTitle.classList.add('title');
- websiteUrl.classList.add('linkTo');
- readButton.classList.add('readButton');
- delButton.classList.add('deleteButton');
+li.classList.add('bookmark');
+websiteTitle.classList.add('title');
+websiteUrl.classList.add('linkTo');
+readButton.classList.add('readButton');
+delButton.classList.add('deleteButton');
 
-websiteTitle.textContent = titleValue
-websiteUrl.textContent = urlValue
-readButton.textContent = "Read"
-delButton.textContent = "Delete"
+//new elements from above are placed into a new list
 
-});
+li.appendChild(websiteTitle);
+li.appendChild(websiteUrl);
+li.appendChild(readButton);
+li.appendChild(delButton);
+list.appendChild(li);   //list generation
+
+// Adding content to new bookmark box
+websiteTitle.textContent = titleValue;
+websiteUrl.textContent = urlValue;
+readButton.textContent = "Read";
+delButton.textContent = "Delete";
+bookmarkCount();
+
+// Read class
+readButton.addEventListener('click', function(){
+  readButton.className = 'readButtonActive';
+  li.className = 'readClass bookmark';
+  var clearRead = document.querySelector('.read');
+  var readClass = document.querySelectorAll('.readClass');
+    // Clear all read classes
+  clearRead.addEventListener('click', function(){
+  li.parentNode.removeChild(li);
+  bookmarkCount();
+ 
+}) 
+ })   
+
+
+// Delete button
+  delButton.addEventListener('click',function(e){
+    var li = e.target.parentElement;
+    li.parentNode.removeChild(li);
+    bookmarkCount();
+})
+  })
+
+// bookmark count 
+function bookmarkCount(){
+var bookmarks = document.querySelectorAll('.bookmark');
+var bookmarksCount = bookmarks.length;
+pCount.innerHTML= "Total Bookmarks = " + bookmarksCount; 
+}
+
+
+
