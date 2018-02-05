@@ -26,6 +26,13 @@ li.appendChild(readButton)
 li.appendChild(delButton)
 list.appendChild(li)   //list generation
 
+// adding classes
+ li.classList.add('bookmark');
+ websiteTitle.classList.add('title');
+ websiteUrl.classList.add('linkTo');
+ readButton.classList.add('readButton');
+ delButton.classList.add('deleteButton');
+
 websiteTitle.textContent = titleValue
 websiteUrl.textContent = urlValue
 readButton.textContent = "Read"
