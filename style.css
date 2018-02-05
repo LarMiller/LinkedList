@@ -37,7 +37,7 @@ p{
 main{
   width: 80%;
   margin: 10px auto 10px auto;
-  padding-top: 35%;
+  padding-top: 30%;
 }
 ul{
   list-style-type: none;
@@ -52,6 +52,8 @@ ul{
 }
 #count{
   text-align: center;
+  border: none;
+  color:#ffd773;
 }
 #enterButton{
   width: 100%;
@@ -102,6 +104,11 @@ ul{
   text-decoration: underline #FFC107;
   font-weight: bold;
 }
+
+.readButtonActive{
+  color:#f05A28;
+}
+
 .deleteButton{
   color: #455A64;
   border: none;
@@ -120,6 +127,8 @@ ul{
   background-color: #CFD8DC;
   box-sizing: border-box;
   vertical-align: top;
+  overflow-y:scroll;
+
 }
 .websiteTitle{
   width: 100%;
@@ -147,4 +156,26 @@ ul{
   text-decoration: underline #FFC107;
   font-weight: bold;
 }
-.title:
+
+.read {
+  width: 40%;
+  padding: 7px;
+  display:block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-top: 3px;
+  align-self: center;
+  background-color: #CFD8DC;
+  margin:10px auto 10px auto;
+  cursor: oi
+}
+
+.read:hover{
+
+}
+
+.readClass{
+  opacity: .8;
+}
+
