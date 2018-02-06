@@ -236,4 +236,17 @@ li :hover{
   font-weight: bold;
 }
 
+/* Styles */
+@media screen 
+  and (min-width: 320px) 
+  and (max-width: 568px)  {
 
+    .firstSection{
+      width: 100%;
+    }
+    .secondSection{
+      width: 100%;
+    }
+}
+
+}
