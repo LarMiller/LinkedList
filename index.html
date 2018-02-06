@@ -2,7 +2,7 @@
 <html>
 <head>
    <link rel="stylesheet" type="text/css" href="style.css">
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans 800, 400" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
     <title>Linked list</title>
 </head>
 <body>
@@ -16,9 +16,15 @@
       <form id = "titleAndUrl">
       <input class = "websiteTitle" type="text" name="title" placeholder="Website Title" required="true">
       <input class = "websiteUrl" type="url" name="title" placeholder="Website URL" required="true">
+      <br />
+      <br /> 
+      <section class = countBox>
+      <img class="count" src="images/bookmark-icon.png"> <p id= "count"> 0 </p> 
+      <img id= "count" class="count" src="images/visibility-button.png"><p id= "countRead">0</p> 
+      <img id= "count" class="count" src="images/new-email.png"><p id= "countUnread"> 0</p> 
+      </section>
       <button id="enterButton">Enter</button>
     </form>
-    <p id= "count">Total Bookmarks</p>
     <button class = "read">Clear Read Bookmarks</button> 
     </main>
   </section>
@@ -34,6 +40,7 @@
     </ul>
     </main>
   </section>
+  <script src=" jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src= "script.js"></script>
 </body>
 </html>

@@ -11,14 +11,16 @@ h1{
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   color:#ffffff;
-  font-size: 60px;
+  font-size: 5.5vw;
   margin:0;
 }
+
 a{
   text-decoration: none;
   font-weight: normal;
   color: inherit;
 }
+
 h2{
   font-size: 24px;
   font-weight: 800;
@@ -26,26 +28,36 @@ h2{
   align-self: left;
   margin:0;
 }
+
 p{
   color: #607D8B;
   align-self: left;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #CFD8DC;
+  border-top: 1px solid #CFD8DC;
   font-size: 22px;
   cursor:pointer;
   border-bottom: 1px solid #CFD8DC;
   border-top: 1px solid #CFD8DC;
   padding: 14px;
-
 }
 main{
   width: 80%;
   margin: 10px auto 10px auto;
-  padding-top: 30%;
+  padding-top: 17%;
 }
+
 ul{
   list-style-type: none;
   margin:0;
   padding: 0;
 }
+
+li :hover{
+  opacity: .9;
+}
+
 #title{
   display: flex;
   justify-content: space-around;
@@ -53,9 +65,17 @@ ul{
   box-sizing: border-box;
 }
 #count{
-  text-align: center;
-  border: none;
-  color:#ffd773;
+ color:white;
+ border-top:none;
+}
+#countRead{
+ color:white;
+ border-top:none;
+}
+
+#countUnread{
+ color:white;
+ border-top:none;
 }
 #enterButton{
   width: 100%;
@@ -65,17 +85,18 @@ ul{
   font-size: 16px;
   font-weight: 800;
   cursor: pointer;
+  margin: 14px auto;
 }
 #title img{
-  width: 70px;
-  height: 70px;
+  width: 20%;
+  height: 10%;
+  margin-top: 1.8vw;
 }
 #enterButton:hover{
   background-color: #ffd773;
 }
 .bookmark{
   width: 100%;
-  height: 21vh;
   border: 1px solid #455A64;
   margin-top: 5px;
   margin-bottom: 20px;
@@ -83,6 +104,23 @@ ul{
   box-sizing: border-box;
   background-color: white;
 }
+
+.countBox{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.count{
+  display: inline-block;
+  border: none;
+  color:#ffd773;
+  text-align: center;
+  border: none;
+  color: #ffd773;
+  width: 2.5vw;
+  height: 5vh;
+}
+
 .bookmarkBox{
   padding-top: 10px;
   width: 90%;
@@ -123,9 +161,8 @@ ul{
 }
 .deleteButton:hover{
   color: #455A64;
-  border: none;
-  font-weight;
   text-decoration: underline #FFC107;
+  font-weight: bold;
 }
 .secondSection{
   width: 50%; 
@@ -135,6 +172,7 @@ ul{
   box-sizing: border-box;
   vertical-align: top;
   overflow-y:scroll;
+  background-image: url(image/bookmark.png);
 
 }
 .websiteTitle{
@@ -163,19 +201,20 @@ ul{
 .read {
   width: 40%;
   padding: 7px;
-  display:block;
+  display: block;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   box-sizing: border-box;
   margin-top: 3px;
   align-self: center;
-  background-color: #CFD8DC;
-  margin:10px auto 10px auto;
-  cursor: oi
+  background-color: #a7340ed9;
+  margin: 10px auto 10px auto;
+  cursor: pointer;
+  color: white;
 }
 
 .read:hover{
-
+  opacity:.7;
 }
 
 .readClass{
@@ -194,4 +233,5 @@ ul{
   text-decoration: underline #FFC107;
   font-weight: bold;
 }
+
 
