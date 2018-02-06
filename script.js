@@ -17,6 +17,7 @@ addForm.addEventListener('submit', function(e){
   var urlValue = addForm.querySelector('input[type= "url"]').value; 
   addForm.reset();
 
+
   // creating new elements assigning to new variables
   var li= document.createElement('li');
   var websiteTitle= document.createElement('h2');
@@ -93,6 +94,5 @@ pCountRead.innerHTML= readCount;
 // var bookmarksCount = bookmarks.length;
 // pCount.innerHTML= bookmarksCount; 
 // }
-
 
 

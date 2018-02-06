@@ -36,7 +36,11 @@ p{
   cursor: pointer;
   border-bottom: 1px solid #CFD8DC;
   border-top: 1px solid #CFD8DC;
-   
+  font-size: 22px;
+  cursor:pointer;
+  border-bottom: 1px solid #CFD8DC;
+  border-top: 1px solid #CFD8DC;
+  padding: 14px;
 }
 main{
   width: 80%;
@@ -192,10 +196,6 @@ li :hover{
   margin-bottom: 30px;
   color:#bbbdbf;
   
-}
-.linkto:hover{
-  text-decoration: underline #FFC107;
-  font-weight: bold;
 }
 
 .read {
