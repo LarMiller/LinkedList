@@ -36,12 +36,11 @@ p{
   cursor: pointer;
   border-bottom: 1px solid #CFD8DC;
   border-top: 1px solid #CFD8DC;
-  font-size: 22px;
   cursor:pointer;
   border-bottom: 1px solid #CFD8DC;
   border-top: 1px solid #CFD8DC;
-  padding: 14px;
 }
+
 main{
   width: 80%;
   margin: 10px auto 10px auto;
@@ -106,8 +105,11 @@ li :hover{
 }
 
 .countBox{
-    display: flex;
-    justify-content: space-evenly;
+     
+  display: flex;
+  width: 60%;
+  margin: auto;
+  justify-content: space-evenly;
 }
 
 .count{
@@ -118,7 +120,7 @@ li :hover{
   border: none;
   color: #ffd773;
   width: 2.5vw;
-  height: 5vh;
+  height: 4.3vh;
 }
 
 .bookmarkBox{
@@ -149,6 +151,7 @@ li :hover{
 
 .readButtonActive{
   color:#f05A28;
+  font-weight: 800;
 }
 
 .deleteButton{
@@ -182,7 +185,7 @@ li :hover{
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   font-size: 19px;
-  color:#bbbdbf;
+  color:black;
   
 }
 .websiteUrl{
@@ -194,7 +197,6 @@ li :hover{
   box-sizing: border-box;
   margin-top: 30px;
   margin-bottom: 30px;
-  color:#bbbdbf;
   
 }
 
