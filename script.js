@@ -1,13 +1,10 @@
-
-
 var list = document.querySelector('.bookmarkBox ul');
 var addForm = document.forms['titleAndUrl'];
 var titleOne = document.querySelector('#titleOne');
 var pOne = document.querySelector('#pOne');
 var deleteButton = document.querySelectorAll('.deleteButton');
 var pCount = document.querySelector('#count');
-var pCountRead = document.querySelector('#countRead');
-var countUnread = document.querySelector('#countUnread');
+
 
 
 // Getting the value of title and Url input
@@ -16,7 +13,6 @@ addForm.addEventListener('submit', function(e){
   var titleValue = addForm.querySelector('input[type= "text"]').value; 
   var urlValue = addForm.querySelector('input[type= "url"]').value; 
   addForm.reset();
-
 
   // creating new elements assigning to new variables
   var li= document.createElement('li');
@@ -61,25 +57,21 @@ addForm.addEventListener('submit', function(e){
   readCount();
   unreadCount();
 
-  // Clear all read classes
   var clearRead = document.querySelector('.read');
-
+  var readClass = document.querySelectorAll('.readClass');
+    // Clear all read classes
   clearRead.addEventListener('click', function(){
   li.parentNode.removeChild(li);
   bookmarkCount();
-  readCount();
-  unreadCount();
+ 
 }) 
-})   
-
+ })   
 
 // Delete button
   delButton.addEventListener('click',function(e){
     var li = e.target.parentElement;
     li.parentNode.removeChild(li);
     bookmarkCount();
-    readCount();
-    unreadCount();
 })
 })
 
@@ -87,11 +79,8 @@ addForm.addEventListener('submit', function(e){
 function bookmarkCount(){
 var bookmarks = document.querySelectorAll('.bookmark');
 var bookmarksCount = bookmarks.length;
-pCount.innerHTML= bookmarksCount; 
+pCount.innerHTML= "Total Bookmarks = " + bookmarksCount; 
 }
-
-
-var bookmarks = document.querySelectorAll('.bookmark');
 
 // read count 
 function readCount(){
@@ -109,5 +98,6 @@ var readCounts = readClass.length;
 var totalCount = parseInt(bookmarksCount - readCounts);
 countUnread.innerHTML= totalCount; 
 }
+
 
 
