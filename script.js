@@ -21,7 +21,7 @@ addForm.addEventListener('submit', function(e){
   // creating new elements assigning to new variables
   var li= document.createElement('li');
   var websiteTitle= document.createElement('h2');
-  var websiteUrl= document.createElement('p');
+  var websiteUrl= document.createElement('a');
   var readButton= document.createElement('button');
   var delButton= document.createElement('button');
 
@@ -43,18 +43,21 @@ addForm.addEventListener('submit', function(e){
   // Adding content to new bookmark box
   websiteTitle.textContent = titleValue;
   websiteUrl.textContent = urlValue;
+  websiteUrl.href = urlValue;
+  websiteUrl.target = "_blank";
   readButton.textContent = "Read";
   delButton.textContent = "Delete";
   bookmarkCount();
   readCount();
   unreadCount();
 
-  websiteUrl.addEventListener('click',copyClipboard)
 
   // Read class
   readButton.addEventListener('click', function(){
-  readButton.className = 'readButtonActive';
-  li.className = 'readClass bookmark';
+  // readButton.className = 'readButtonActive';
+  this.classList.toggle('readButtonActive');
+  this.classList.toggle('readButton');
+  // li.className = 'readClass bookmark';
   readCount();
   unreadCount();
 
@@ -80,14 +83,6 @@ addForm.addEventListener('submit', function(e){
 })
 })
 
-// copy to clipboard
-function copyClipboard() {
-  var copyText = document.querySelector(".linkTo");
-  copyText.select;
-  document.execCommand("Copy");
-  alert("Copied the text: " + copyText.value);
-}
-
 // bookmark count 
 function bookmarkCount(){
 var bookmarks = document.querySelectorAll('.bookmark');
@@ -100,7 +95,7 @@ var bookmarks = document.querySelectorAll('.bookmark');
 
 // read count 
 function readCount(){
-var readClass = document.querySelectorAll('.readClass');
+var readClass = document.querySelectorAll('.readButtonActive');
 var readCounts = readClass.length;
 pCountRead.innerHTML= readCounts; 
 }
@@ -109,7 +104,7 @@ pCountRead.innerHTML= readCounts;
 function unreadCount(){
 var bookmarks = document.querySelectorAll('.bookmark');
 var bookmarksCount = bookmarks.length;
-var readClass = document.querySelectorAll('.readClass');
+var readClass = document.querySelectorAll('.readButtonActive');
 var readCounts = readClass.length;
 var totalCount = parseInt(bookmarksCount - readCounts);
 countUnread.innerHTML= totalCount; 

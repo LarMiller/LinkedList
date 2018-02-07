@@ -15,11 +15,11 @@ h1{
   margin:0;
 }
 
-a{
+/*a{
   text-decoration: none;
   font-weight: normal;
   color: inherit;
-}
+}*/
 
 h2{
   font-size: 24px;
@@ -29,7 +29,8 @@ h2{
   margin:0;
 }
 
-p{
+p,
+a{
   color: #607D8B;
   align-self: left;
   font-size: 14px;
@@ -39,6 +40,10 @@ p{
   cursor:pointer;
   border-bottom: 1px solid #CFD8DC;
   border-top: 1px solid #CFD8DC;
+}
+
+a{
+  display: block;
 }
 
 main{
@@ -119,7 +124,6 @@ li :hover{
   text-align: center;
   border: none;
   color: #ffd773;
-  width: 2.5vw;
   height: 4.3vh;
 }
 
@@ -239,13 +243,17 @@ li :hover{
 /* Styles */
 @media screen 
   and (min-width: 320px) 
-  and (max-width: 568px)  {
+  and (max-width: 788px)  {
 
     .firstSection{
       width: 100%;
     }
     .secondSection{
       width: 100%;
+    }
+
+    h1{
+      font-size: 5vh;
     }
 }
 
