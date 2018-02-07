@@ -63,7 +63,7 @@ addForm.addEventListener('submit', function(e){
 
   // Clear all read classes
   var clearRead = document.querySelector('.read');
-
+  var readClass = document.querySelectorAll('.readButtonActive');
   clearRead.addEventListener('click', function(){
   li.parentNode.removeChild(li);
   bookmarkCount();
