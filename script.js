@@ -57,7 +57,7 @@ addForm.addEventListener('submit', function(e){
   // readButton.className = 'readButtonActive';
   this.classList.toggle('readButtonActive');
   this.classList.toggle('readButton');
-  // li.className = 'readClass bookmark';
+  li.className = 'readClass bookmark';
   readCount();
   unreadCount();
 
