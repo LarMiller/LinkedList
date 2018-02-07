@@ -111,7 +111,6 @@ li :hover{
 }
 
 .countBox{
-     
   display: flex;
   width: 60%;
   margin: auto;
@@ -158,6 +157,7 @@ li :hover{
 .readButtonActive{
   color:#f05A28;
   font-weight: 800;
+  opacity: .8;
 }
 
 .deleteButton{
@@ -253,7 +253,20 @@ li :hover{
 }
 
 h1{
-  font-size: 5vh;
+  font-size: 8vw;
+}
+
+#title{
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+#title img{
+   margin-top: 4vw;
+}
+
+main {
+    padding-top: 20%;
 }
 }
 
