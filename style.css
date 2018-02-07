@@ -7,6 +7,7 @@ body{
   font-weight: 400;
   font-size: 0;
 }
+
 h1{
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
@@ -14,12 +15,6 @@ h1{
   font-size: 5.5vw;
   margin:0;
 }
-
-/*a{
-  text-decoration: none;
-  font-weight: normal;
-  color: inherit;
-}*/
 
 h2{
   font-size: 24px;
@@ -68,10 +63,12 @@ li :hover{
   margin: 13px auto 10px auto;
   box-sizing: border-box;
 }
+
 #count{
  color:white;
  border-top:none;
 }
+
 #countRead{
  color:white;
  border-top:none;
@@ -81,6 +78,7 @@ li :hover{
  color:white;
  border-top:none;
 }
+
 #enterButton{
   width: 100%;
   padding: 10px;
@@ -91,14 +89,17 @@ li :hover{
   cursor: pointer;
   margin: 14px auto;
 }
+
 #title img{
   width: 20%;
   height: 10%;
   margin-top: 1.8vw;
 }
+
 #enterButton:hover{
   background-color: #ffd773;
 }
+
 .bookmark{
   width: 100%;
   border: 1px solid #455A64;
@@ -114,8 +115,7 @@ li :hover{
   display: flex;
   width: 60%;
   margin: auto;
-  justify-content: space-evenly;
-  
+  justify-content: space-evenly; 
 }
 
 .count{
@@ -139,14 +139,16 @@ li :hover{
   background-color: #455A64;
   box-sizing: border-box;
 }
+
 .readButton{
   color: #455A64;
   font-size: 14px;
   border: none;
   text-decoration: underline #F4F6F6;
   text-transform: ;
-  padding-bottom: 5px;
+  padding-top: 10px;
 }
+
 .readButton:hover{
   color: #455A64;
   text-decoration: underline #FFC107;
@@ -164,13 +166,15 @@ li :hover{
   border: none;
   text-decoration: underline #F4F6F6;
   float: right;
-  padding-bottom: 5px;
+  padding-top: 10px;
 }
+
 .deleteButton:hover{
   color: #455A64;
   text-decoration: underline #FFC107;
   font-weight: bold;
 }
+
 .secondSection{
   width: 50%; 
   height:100%;
@@ -180,8 +184,8 @@ li :hover{
   vertical-align: top;
   overflow-y:scroll;
   background-image: url(image/bookmark.png);
-
 }
+
 .websiteTitle{
   width: 100%;
   padding: 15px;
@@ -189,9 +193,9 @@ li :hover{
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   font-size: 19px;
-  color:black;
-  
+  color:black;  
 }
+
 .websiteUrl{
   width: 100%;
   padding: 15px;
@@ -201,7 +205,6 @@ li :hover{
   box-sizing: border-box;
   margin-top: 30px;
   margin-bottom: 30px;
-  
 }
 
 .read {
@@ -223,10 +226,6 @@ li :hover{
   opacity:.7;
 }
 
-.readClass{
-  opacity: .8;
-}
-
 .linkTo{
   font-size: 16px;
   overflow: hidden;
@@ -235,6 +234,7 @@ li :hover{
   padding: 14px;
   color: #607D8B;
 }
+
 .linkTo:hover{
   text-decoration: underline #FFC107;
   font-weight: bold;
@@ -244,18 +244,16 @@ li :hover{
 @media screen 
   and (min-width: 320px) 
   and (max-width: 788px)  {
-    .firstSection{
-      width: 100%;
-    }
-    .secondSection{
-      width: 100%;
-    }
-
-    h1{
-      font-size: 5vh;
-    }
+.firstSection{
+  width: 100%;
 }
 
+.secondSection{
+  width: 100%;
+}
 
-
+h1{
+  font-size: 5vh;
+}
+}
 
