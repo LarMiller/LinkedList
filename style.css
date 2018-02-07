@@ -57,6 +57,15 @@ li :hover{
   opacity: .9;
 }
 
+figcaption{
+  font-size: 1.5vw;
+  color:white;
+}
+
+figure{
+  text-align: center;
+}
+
 #title{
   display: flex;
   justify-content: space-around;
@@ -66,17 +75,17 @@ li :hover{
 
 #count{
  color:white;
- border-top:none;
+ border:none;
 }
 
 #countRead{
  color:white;
- border-top:none;
+ border: none;
 }
 
 #countUnread{
  color:white;
- border-top:none;
+ border:none;
 }
 
 #enterButton{
@@ -116,6 +125,7 @@ li :hover{
   margin: auto;
   justify-content: space-evenly; 
 }
+
 
 .count{
   display: inline-block;
