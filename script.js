@@ -1,11 +1,14 @@
+
+
 var list = document.querySelector('.bookmarkBox ul');
 var addForm = document.forms['titleAndUrl'];
 var titleOne = document.querySelector('#titleOne');
 var pOne = document.querySelector('#pOne');
 var deleteButton = document.querySelectorAll('.deleteButton');
 var pCount = document.querySelector('#count');
-
-
+var pCountRead = document.querySelector('#countRead');
+var countUnread = document.querySelector('#countUnread');
+var read = document.querySelector('.read');
 
 // Getting the value of title and Url input
 addForm.addEventListener('submit', function(e){
@@ -20,7 +23,6 @@ addForm.addEventListener('submit', function(e){
   var websiteUrl= document.createElement('a');
   var readButton= document.createElement('button');
   var delButton= document.createElement('button');
-
 
   // adding classes
   li.classList.add('bookmark');
@@ -47,56 +49,48 @@ addForm.addEventListener('submit', function(e){
   readCount();
   unreadCount();
 
-
-  // Read class
-  readButton.addEventListener('click', function(){
-  // readButton.className = 'readButtonActive';
-  this.classList.toggle('readButtonActive');
-  this.classList.toggle('readButton');
-  li.className = 'readClass bookmark';
+// Read class
+readButton.addEventListener('click', function(){
+  li.classList.toggle('readButtonActive');
+  li.classList.toggle('readButton');
   readCount();
   unreadCount();
-
-  var clearRead = document.querySelector('.read');
-  var readClass = document.querySelectorAll('.readButtonActive');
-  clearRead.addEventListener('click', function(){
-  li.parentNode.removeChild(li);
-  bookmarkCount();
- 
-}) 
- })   
+})   
 
 // Delete button
-  delButton.addEventListener('click',function(e){
-    var li = e.target.parentElement;
-    li.parentNode.removeChild(li);
-    bookmarkCount();
+delButton.addEventListener('click',function(e){
+  var li = e.target.parentElement;
+  li.parentNode.removeChild(li);
+  bookmarkCount();
+  readCount();
+  unreadCount();
 })
 })
 
 // bookmark count 
 function bookmarkCount(){
-var bookmarks = document.querySelectorAll('.bookmark');
-var bookmarksCount = bookmarks.length;
-pCount.innerHTML= "Total Bookmarks = " + bookmarksCount; 
+  var bookmarks = document.querySelectorAll('.bookmark');
+  var bookmarksCount = bookmarks.length;
+  pCount.innerHTML= bookmarksCount; 
 }
+
+var bookmarks = document.querySelectorAll('.bookmark');
 
 // read count 
 function readCount(){
-var readClass = document.querySelectorAll('.readButtonActive');
-var readCounts = readClass.length;
-pCountRead.innerHTML= readCounts; 
+  var readClass = document.querySelectorAll('.readButtonActive');
+  var readCounts = readClass.length;
+  pCountRead.innerHTML= readCounts; 
 }
 
 // unread count 
 function unreadCount(){
-var bookmarks = document.querySelectorAll('.bookmark');
-var bookmarksCount = bookmarks.length;
-var readClass = document.querySelectorAll('.readButtonActive');
-var readCounts = readClass.length;
-var totalCount = parseInt(bookmarksCount - readCounts);
-countUnread.innerHTML= totalCount; 
+  var bookmarks = document.querySelectorAll('.bookmark');
+  var bookmarksCount = bookmarks.length;
+  var readClass = document.querySelectorAll('.readButtonActive');
+  var readCounts = readClass.length;
+  var totalCount = parseInt(bookmarksCount - readCounts);
+  countUnread.innerHTML= totalCount; 
 }
-
 
 
