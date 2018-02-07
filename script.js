@@ -52,10 +52,17 @@ addForm.addEventListener('submit', function(e){
 // Read class
 readButton.addEventListener('click', function(){
   li.classList.toggle('readButtonActive');
-  li.classList.toggle('readButton');
   readCount();
   unreadCount();
-})   
+})
+
+// Delete read class
+read.addEventListener('click', function(e){
+  $( ".readButtonActive" ).remove();
+  bookmarkCount();
+  readCount();
+  unreadCount();
+} ) 
 
 // Delete button
 delButton.addEventListener('click',function(e){
@@ -66,6 +73,7 @@ delButton.addEventListener('click',function(e){
   unreadCount();
 })
 })
+
 
 // bookmark count 
 function bookmarkCount(){
@@ -92,5 +100,7 @@ function unreadCount(){
   var totalCount = parseInt(bookmarksCount - readCounts);
   countUnread.innerHTML= totalCount; 
 }
+
+
 
 
