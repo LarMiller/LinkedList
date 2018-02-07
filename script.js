@@ -1,12 +1,9 @@
-
-
 var list = document.querySelector('.bookmarkBox ul');
 var addForm = document.forms['titleAndUrl'];
 var titleOne = document.querySelector('#titleOne');
 var pOne = document.querySelector('#pOne');
 var deleteButton = document.querySelectorAll('.deleteButton');
 var pCount = document.querySelector('#count');
-var list = document.querySelector('.bookmarkBox ul');
 
 
 
@@ -17,40 +14,49 @@ addForm.addEventListener('submit', function(e){
   var urlValue = addForm.querySelector('input[type= "url"]').value; 
   addForm.reset();
 
-// creating new elements assigning to new variables
-var li= document.createElement('li');
-var websiteTitle= document.createElement('h2');
-var websiteUrl= document.createElement('p');
-var readButton= document.createElement('button');
-var delButton= document.createElement('button');
+  // creating new elements assigning to new variables
+  var li= document.createElement('li');
+  var websiteTitle= document.createElement('h2');
+  var websiteUrl= document.createElement('a');
+  var readButton= document.createElement('button');
+  var delButton= document.createElement('button');
 
 
-// adding classes
-li.classList.add('bookmark');
-websiteTitle.classList.add('title');
-websiteUrl.classList.add('linkTo');
-readButton.classList.add('readButton');
-delButton.classList.add('deleteButton');
+  // adding classes
+  li.classList.add('bookmark');
+  websiteTitle.classList.add('title');
+  websiteUrl.classList.add('linkTo');
+  readButton.classList.add('readButton');
+  delButton.classList.add('deleteButton');
 
-//new elements from above are placed into a new list
+  //new elements from above are placed into a new list
+  li.appendChild(websiteTitle);
+  li.appendChild(websiteUrl);
+  li.appendChild(readButton);
+  li.appendChild(delButton);
+  list.appendChild(li);   //list generation
 
-li.appendChild(websiteTitle);
-li.appendChild(websiteUrl);
-li.appendChild(readButton);
-li.appendChild(delButton);
-list.appendChild(li);   //list generation
+  // Adding content to new bookmark box
+  websiteTitle.textContent = titleValue;
+  websiteUrl.textContent = urlValue;
+  websiteUrl.href = urlValue;
+  websiteUrl.target = "_blank";
+  readButton.textContent = "Read";
+  delButton.textContent = "Delete";
+  bookmarkCount();
+  readCount();
+  unreadCount();
 
-// Adding content to new bookmark box
-websiteTitle.textContent = titleValue;
-websiteUrl.textContent = urlValue;
-readButton.textContent = "Read";
-delButton.textContent = "Delete";
-bookmarkCount();
 
-// Read class
-readButton.addEventListener('click', function(){
-  readButton.className = 'readButtonActive';
-  li.className = 'readClass bookmark';
+  // Read class
+  readButton.addEventListener('click', function(){
+  // readButton.className = 'readButtonActive';
+  this.classList.toggle('readButtonActive');
+  this.classList.toggle('readButton');
+  // li.className = 'readClass bookmark';
+  readCount();
+  unreadCount();
+
   var clearRead = document.querySelector('.read');
   var readClass = document.querySelectorAll('.readClass');
     // Clear all read classes
@@ -61,14 +67,13 @@ readButton.addEventListener('click', function(){
 }) 
  })   
 
-
 // Delete button
   delButton.addEventListener('click',function(e){
     var li = e.target.parentElement;
     li.parentNode.removeChild(li);
     bookmarkCount();
 })
-  })
+})
 
 // bookmark count 
 function bookmarkCount(){
@@ -77,9 +82,22 @@ var bookmarksCount = bookmarks.length;
 pCount.innerHTML= "Total Bookmarks = " + bookmarksCount; 
 }
 
+// read count 
+function readCount(){
+var readClass = document.querySelectorAll('.readButtonActive');
+var readCounts = readClass.length;
+pCountRead.innerHTML= readCounts; 
+}
 
-//bookmark deletion
-
+// unread count 
+function unreadCount(){
+var bookmarks = document.querySelectorAll('.bookmark');
+var bookmarksCount = bookmarks.length;
+var readClass = document.querySelectorAll('.readButtonActive');
+var readCounts = readClass.length;
+var totalCount = parseInt(bookmarksCount - readCounts);
+countUnread.innerHTML= totalCount; 
+}
 
 
 
