@@ -115,6 +115,7 @@ li :hover{
   width: 60%;
   margin: auto;
   justify-content: space-evenly;
+  
 }
 
 .count{
@@ -142,7 +143,6 @@ li :hover{
   color: #455A64;
   font-size: 14px;
   border: none;
-  font-weight:
   text-decoration: underline #F4F6F6;
   text-transform: ;
   padding-bottom: 5px;
@@ -233,7 +233,7 @@ li :hover{
   white-space: initial;
   max-height:20px;
   padding: 14px;
-  color: 607D8B;
+  color: #607D8B;
 }
 .linkTo:hover{
   text-decoration: underline #FFC107;
@@ -244,7 +244,6 @@ li :hover{
 @media screen 
   and (min-width: 320px) 
   and (max-width: 788px)  {
-
     .firstSection{
       width: 100%;
     }
@@ -257,4 +256,6 @@ li :hover{
     }
 }
 
-}
+
+
+
